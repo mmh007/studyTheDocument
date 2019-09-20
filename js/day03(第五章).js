@@ -99,15 +99,55 @@ $(function ($) {
 
 // 队列方法
 console.log('--- 队列方法 --- ')
+
+var red = new Array();
+red = ['yeoolw'];
+var blue = red.push('red','green'); // 向后添加
+console.log(blue); // 获取长度push后的长度
+console.log(red); // 获取结果
+
+var item = red.shift(); // 删除第一项
+console.log(item);
+console.log(item.length);
+
+var itemm = red.unshift('ddd','dada'); // 向前添加
+console.log(itemm)
+console.log(red)
+var itemma = red.pop(); // 删除最后一项
+console.log(itemma);
+
 // 重排序方法
 console.log('--- 重排序方法 ---')
 
-console.log('--- 重排序方法 ---')
+console.log('reverse()--指反转') // 指反转
+console.log('sort()--指排序') // 指排序
+
+var value = [1, 2, 3, 4, 5, 6];
+value.reverse(); // 将数组反转，改变内容
+console.log(value);
+
+value.sort();
+console.log(value);
+
+function compare(value1, value2) {
+  if (value1 < value2) {
+    return 1 ;
+  } else if (value1 > value2) {
+    return -1;
+  } else {
+    return 0;
+  }
+}
+var values = [0, 1, 5, 10, 15];
+values.sort(compare); //  得到顺序改变
+console.log(values)
 
 
+ function compare( value1, value2) {
+   return value2 -value1;
+ }
 
-
-
-
+// 操作方法
+console.log('--- 操作方法  ---')
 
 })
