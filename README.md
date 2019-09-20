@@ -1,10 +1,25 @@
+# javascript-mark.ma
+
+### 描述
+
+- …or create a new repository on the command line
+- echo "# 11" >> README.md
+- git init
+- git add README.md
+- git commit -m "first commit"
+- git remote add origin https://github.com/mmh007/11.git
+- git push -u origin master
+- …or push an existing repository from the command line
+- git remote add origin https://github.com/mmh007/11.git
+- git push -u origin master
+
 ### 目录
-- [首页 ～ 1](./html/首页.html)
+- [首页 ～ 1](./html)
 
-- [第三、四章2](./html/day01(第三、四章 --概念、变量、作用域、内存).html)
+- [第三、四章 ～ 2](./html/)
 
-- [第五章 ～ 3](./html/day03(第五章--引用类型).html)
+- [第五章 ～ 3](./html)
 
-- [第六章 ～ 4](./html/day04(第六章--面向对象).html)
+- [第六章 ～ 4](./html)
 
-- [第七章 ～ 5](./html/day05(第七章--函数表达式).html)
+- [第七章 ～ 5](./html)
