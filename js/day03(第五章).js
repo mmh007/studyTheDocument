@@ -453,7 +453,7 @@ console.log(data[0].name);
 
 // 函数内部属性
 console.log('---- 函数内部属性 ---')
-
+console.log('---- 函数内部属性 ---')
 
 
 
