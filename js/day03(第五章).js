@@ -453,7 +453,114 @@ console.log(data[0].name);
 
 // 函数内部属性
 console.log('---- 函数内部属性 ---')
-console.log('---- 函数内部属性 ---')
+
+function factorial (snum) { // 该属性是一个指针，指向拥有这个 arguments 对象的函数
+  if (snum <= 1 ){
+    return 1;
+  } else {
+    return snum * factorial(snum - 1)
+  }
+}
+function factorial(snum) { // 消除紧耦合现象
+  if (snum <= 1) {
+    return 1;
+  } else {
+    return snum * arguments.callee(snum-1)
+  }
+}
+// console.log(factorial(4));
+
+var trueFactorial = factorial;
+factorial = function () { // 都可以保证正常完成递归调用
+  return 0;
+}
+
+console.log(trueFactorial(5))
+console.log(factorial(5))
+
+// this的作用域
+
+window.color = 'redddd';
+var aca = {color: 'blue'};
+
+function sctly() {
+  console.log(this.color);
+}
+sctly();
+console.log(sctly());
+
+aca.sctly = sctly;
+aca.sctly();
+console.log(aca.sctly())
+
+// 函数的名字是一个包含指针的变量而已。
+
+function outer() {
+  inner();
+}
+
+function inner() {
+  console.log(inner.caller);
+}
+outer();
+
+// 函数属性和方法
+
+function saynmae(name) {
+  console.log(name);
+}
+
+function summ(num1q, num2q) {
+  return num1q + num2q;
+}
+
+function sayHi () {
+  console.log('hi');
+}
+
+console.log(saynmae.length,'// 函数内部长度');
+console.log(summ.length);
+console.log(sayHi.length);
+
+
+console.log('apply()',' // 一个是在其中运行函数的作用域，另一个是参数数组')
+
+window.coloee = '123';
+var o = {color: 'red'};
+
+// fucntion sss () {
+//   console.log(this.o)
+// }
+
+// 基本包装类型
+console.log('--- 基本包装类型 ---');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
