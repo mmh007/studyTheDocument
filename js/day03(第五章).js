@@ -596,13 +596,140 @@ while(pos > -1) {
 console.log(position)
 
 
+console.log('replace() // 方法，替换')
+var text = 'cat, bat, ccadat ,ieuat';
+var result = text.replace('at','bat');
+console.log(result);
+
+result = text.replace(/at/g,'111');
+console.log(result,'// 将查找到的at，替换为111');
+
+//
+function htmlEscapa(text) {
+  return text.replace(/[<>"g]/g, function(match, pos, originalText){
+    switch(match) {
+      case "<":
+        return "&lt;";
+      case ">":
+        return "&gt;";
+      case "&":
+        return "&amp;";
+      case "\"":
+        return "&quot;";
+    }
+  })
+}
+console.log(htmlEscapa("<p class=\"greeting\">Hellow world!</p>"));
+
+//  localeCompare()方法 这个方法比较两个字符串
+console.log('---  localeCompare()方法 ---');
+
+var stringValue = "yellow"; // 字母表中排序
+console.log(stringValue.localeCompare("brick"),'// 该排在字符串参数之前，则返回一个负数'); //1 
+console.log(stringValue.localeCompare("yellow"),'// 字符串等于字符串参数，则返回 0'); //0 
+console.log(stringValue.localeCompare("zoo"),'// 该排在字符串参数之后，则返回一个正数'); //-1
+
+
+function determineOrder(value) { 
+  var result = stringValue.localeCompare(value); 
+  if (result < 0){ 
+    console.log("The -1 '" + value + "'."); 
+  } else if (result > 0) { 
+    console.log("The 1 '" + value + "'."); 
+  } else {
+    console.log("The 0 '" + value + "'."); 
+  } 
+ } 
+ determineOrder("brick");
+ determineOrder("yellow"); 
+ determineOrder("zoo");
+
+// fromCharCode() 方法
+console.log(String.fromCharCode(104, 101, 108, 109, 111),'// 传递的是字符串"hello"中每个字母的字符编码');
+
+
+// 单体内置对象
+console.log('--- 单体内置对象 ---')
+
+// Object、Array 、 String
+
+// Global对象
+console.log('--- Global对象 ---')
+
+//eval()方法 
+console.log('--- eval()方法 --- // 它只接受一个参数')
+
+console.log('undefined 特殊值undefined Date 构造函数Date')
+  console.log('NaN 特殊值NaN RegExp 构造函数RegExp')
+    console.log('Infinity 特殊值Infinity Error 构造函数Error')
+      console.log('Object 构造函数Object EvalError 构造函数EvalError')
+        console.log('Array 构造函数Array RangeError 构造函数RangeError')
+          console.log('Function 构造函数Function ReferenceError 构造函数ReferenceError')
+            console.log('Boolean 构造函数Boolean SyntaxError 构造函数SyntaxError')
+              console.log('String 构造函数String TypeError 构造函数TypeError')
+                console.log('Number 构造函数Number URIError 构造函数URIError')
+
+// window 对象
+console.log('--- window 对象 ----')
+
+// var color = "red";  // 全局变量
+// function sayColor(){  // 全局函数
+//  alert(window.color); 
+// } 
+// window.sayColor(); //"red"
+
+
+// 5.7.2 Math对象
+console.log('----- Math对象 ---- ')
 
 
 
+// min()和 max()方法
+console.log('--- min()和 max()方法 ---')
+
+var max = Math.max(3, 45, 546, 54);
+console.log(max,'// 最大值')
+var min = Math.min(55, 48, 878, 9);
+console.log(min,'// 最小值')
+
+console.log('-- apply() --')
+var valuess = [1, 344, 6756, 11, 5];
+var max = Math.max.apply(Math.valuess);
+console.log(valuess,'// 元素组');
+console.log(max,'// ')
+
+// 3. 舍入方法
+console.log('---- 舍入方法 ----')
+console.log('Math.ceil()','// 执行向上舍入，即它总是将数值向上舍入为最接近的整数；')
+console.log('Math.floor()','// 执行向下舍入，即它总是将数值向下舍入为最接近的整数；')
+console.log('Math.round()','// 执行标准舍入，即它总是将数值四舍五入为最接近的整数; ')
+
+console.log(Math.ceil(25.9),'// 向上舍入'); //26 向上舍入
+console.log(Math.ceil(25.5)); //26 
+console.log(Math.ceil(25.1)); //26 
+
+console.log(Math.round(25.9),'// 向下舍入'); //26 向下舍入
+console.log(Math.round(25.5)); //26 
+console.log(Math.round(25.1)); //25 
+
+console.log(Math.floor(25.9),'// 标准舍入'); //25 标准舍入
+console.log(Math.floor(25.5)); //25 
+console.log(Math.floor(25.1)); //25
 
 
+// random()方法
+console.log('--- random()方法 ---')
+
+var num882 = Math.floor(Math.random() * 10 + 1);
+console.log(num882)
 
 
+console.log('===== 小节总结 =====')
+console.log('引用类型与传统面向对象程序设计中的类相似，但实现不同；')
+console.log('Object 是一个基础类型，其他所有类型都从 Object 继承了基本的行为；')
+console.log('Array 类型是一组值的有序列表，同时还提供了操作和转换这些值的功能；')
+console.log('Date 类型提供了有关日期和时间的信息，包括当前日期和时间以及相关的计算功能；')
+console.log('RegExp 类型是 ECMAScript 支持正则表达式的一个接口，提供了最基本的和一些高级的正则表达式功能')
 
 
 
