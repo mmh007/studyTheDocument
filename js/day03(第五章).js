@@ -536,29 +536,64 @@ var o = {color: 'red'};
 console.log('--- 基本包装类型 ---');
 
 
+// Boolean 类型
+console.log('--- Boolean类型 ---')
 
 
+// Number 类型
+console.log('----- Number 类型 ----')
+
+var numberobject = new Number(10);
+
+// 示例
+console.log('toFixed()');
+var num = 10;
+console.log(num.toFixed(2),'// 返回数值');
+
+console.log(num.toExponential(1))
 
 
+// String类型
+console.log('--- String类型 ---')
 
+// 字符方法
 
+console.log('字符串方法')
+console.log('charAt()','// 返回给定位置')
+console.log('charCodeAt()')
 
+var stringValue = 'hello world';
+console.log(stringValue.charAt(1));
 
+// 字符串操作方法
+console.log('concat()', '// 将一个或多个字符串拼接起来')
 
+var string = 'hello';
+var reult = string.concat(',', 'world' );
+console.log(reult);
 
+// 拼接字符串的方法：
+console.log('slice(), // ')
+console.log('substr()')
+console.log('substring()')
 
+// 字符串位置方法
+console.log('indexof(),// 开头向后搜索字符串')
+console.log('lastIndexof()， // 从末尾向后搜索子字符串')
 
+var indexss = 'hello world';
+console.log(indexss.indexOf('o'),'// 取第一次出现的地方');
+console.log(indexss.lastIndexOf('o'),'// 取最后一次出现的地方');
 
-
-
-
-
-
-
-
-
-
-
+var mameihua = 'you i into ffootr, ijwidwdnoi fsdjhfi isdjdios';
+var position = new Array();
+var pos = mameihua.indexOf('e');
+console.log(pos);
+while(pos > -1) {
+  position.push(pos);
+  pos = mameihua.indexOf('e',pos + 1);
+}
+console.log(position)
 
 
 
