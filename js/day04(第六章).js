@@ -193,7 +193,101 @@ Paa.prototype = {
   }
 }
 
+// 原型的动态性
+console.log('--- 原型的动态性 ---')
 
+var friend = new Person();
+Person.prototype.sayHi = function () {
+  console.log('原型参数','// prototype');
+}
+friend.sayHi();
+console.log(friend.sayHi())
+
+// 原生对象的原型
+console.log('-- 原生对象的原型 --');
+console.log('所有原生引用类型：Object , Array , String,等待')
+
+console.log(typeof Array.prototype.sort);
+console.log(typeof String.prototype.substring);
+
+//
+String.prototype.startsWith = function (text) {
+  return this.indexOf(text) == 0;
+}
+var msg = 'Hello world!';
+console.log(msg.startsWith('Hello'));
+
+
+// 组合使用构造函数模式和原型模式
+console.log('--- 组合使用构造函数模式和原型模式 ---')
+
+
+// 动态原型模式
+console.log('--- 动态原型模式 ---')
+
+// 寄生构造函数模式
+console.log('--- 寄生构造函数模式 ---')
+
+function speciArray() {
+  // 创建数组
+  var valiues = new Array();
+  // 添加值
+  valiues.push.apply(valiues, arguments);
+  // 添加方法
+  valiues.toPipedString = function () {
+    return this.join('|');
+  };
+  // 返回数组
+  return valiues;
+}
+var colors = new speciArray('red', 'blue', 'yellow', 'green');
+console.log(colors.toPipedString());
+
+// 稳妥构造函数模式
+console.log('--- 稳妥构造函数模式 ---')
+
+// 继承
+console.log('----- 继承 -----')
+console.log('1、接口继承 2、实现继承')
+
+// 原型链
+console.log('---- 原型链 ---')
+
+// 确定原型和示例的关系
+console.log('--- 确定原型和示例的关系 ---')
+// console.log(instance instanceof Object);
+// console.log(instance instanceof SuperType)
+
+function red() {
+  this.prototype = true;
+}
+red.prototype.getSuperValue = function () {
+  return this.prototype;
+};
+function bloue () {
+  this.subproperty = false;
+}
+bloue.prototype = new red();
+
+
+// 借用构造函数
+console.log('--- prototype ---')
+
+console.log('call()','// ')
+console.log('apply()','// ')
+
+
+// 传递参数
+console.log('--- 传递参数 ---')
+
+// 组合继承
+console.log('--- 组合继承 ---')
+
+// 原型式继承
+console.log('--- 原型式继承 ---')
+
+// 寄生式继承
+console.log('--- 寄生式继承 ---')
 
 
 
