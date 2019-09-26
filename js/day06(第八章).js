@@ -105,7 +105,7 @@ console.log('clearInterval() // 解除计时器')
 
 // alert()、confirm()和 prompt()方法
 
-
+// confirm('wdoqk')
 console.log('alert() // 弹框')
 console.log('confirm() // 确认框')
 console.log('prompt()  // 输入框')
@@ -113,22 +113,64 @@ console.log('prompt()  // 输入框')
 
 
 // 8.1.7 系统对话框
+// var result = prompt('okfpwjefwe', '');
+// if (result !== null) {
+//   alert ('111,' + result);
+// }
 
 
+// location 对象
 
 
+// 查询字符串参数
+console.log('--- 查询字符串参数 ---')
+
+function getQueryStringArgs() {
+  // 取得查询字符串并去掉开头的问好
+  var qs = (location.search.length > 0 ? location.search.substring(1) : ''),
+  // 保存数据
+  args = {},
+  // 取得每一项
+  items = qs.length ? qs.split('&') : [],
+  item = null,
+  name = null,
+  value = null,
+  // 在for循环中使用
+  i = 0,
+  len = otems.length;
+  // 逐个将每一项添加到args对象
+  for (i = 0; i < len; i ++ ) {
+    item = items[i].split('=');
+    name = decodeURIComponent(item[0]);
+    value = decodeURIComponent(item[1]);
+    if (name.length) {
+      args[name] = value;
+    }
+  }
+  return args;
+}
+
+// 位置操作
+console.log('-- 位置操作 --')
+
+// replace() // 要禁止用这种行为时
+// reload() // 重新加载当前页面
 
 
+// navigator 对象
+console.log('--- 位置操作 ---')
 
+// 检查插件
+console.log('--- 检查插件 ---')
 
+try {
+  
+} catch (error) {
+  
+}
 
-
-
-
-
-
-
-
+// 注册处理程序
+console.log('--- 注册处理程序 ---')
 
 
 
