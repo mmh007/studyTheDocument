@@ -173,17 +173,30 @@ try {
 console.log('--- 注册处理程序 ---')
 
 
+// scren 对象
+console.log('--- screen 对象 ---')
+console.log('// 指屏幕像素、大小等等')
+console.log(' screen // 表示对象上只用来表明客户端的能力；')
 
+// history 对象
+console.log('--- history 对象 ---')
+console.log('go() ','// 在用户历史记录中给人以跳转')
 
+// 示例：
+// history.go(-1);
+console.log('history.go(-1)','// 指后退' )
+console.log('history.go(1)','// 指前进' )
+console.log('history.go(2)','// 指前进2页' )
 
+// 后退一页（）
+// history.back()
+console.log('history.back()')
+// 前进一页（）
+// history.forward();
+console.log('istory.forward();')
 
-
-
-
-
-
-
-
+// sereen 对象保存着与客户端显示器有关的信息，这些信息一般自用与分析站点分析；
+// history 对象访问浏览器的历史记录开了一个小缝隙
 
 
 
